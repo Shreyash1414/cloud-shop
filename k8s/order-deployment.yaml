@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: your-docker-id/order-service:latest
+          image: shreyash1414/cloud_shop_project-order-service
           ports:
             - containerPort: 5002
