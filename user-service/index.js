@@ -1,9 +1,9 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-const client = require('prom-client');
+// const client = require('prom-client');
 const cors = require('cors');
 const app = express();
-const register = new client.Registry();
+// const register = new client.Registry();
 app.use(cors());
 app.use(express.json());
 
@@ -37,9 +37,9 @@ app.listen(PORT, () => console.log('user-service running on port ' + PORT));
 
 
 
-client.collectDefaultMetrics({ register });
+// client.collectDefaultMetrics({ register });
 
-app.get('/metrics', async (req, res) => {
-  res.set('Content-Type', register.contentType);
-  res.end(await register.metrics());
-});
+// app.get('/metrics', async (req, res) => {
+//   res.set('Content-Type', register.contentType);
+//   res.end(await register.metrics());
+// });

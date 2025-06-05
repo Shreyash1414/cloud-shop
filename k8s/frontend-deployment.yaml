@@ -16,7 +16,7 @@ spec:
         - name: frontend
           image: shreyash1414/cloud_shop_project-frontend
           ports:
-            - containerPort: 3000
+            - containerPort: 4000
           env:
             - name: NODE_OPTIONS
               value: "--openssl-legacy-provider"
