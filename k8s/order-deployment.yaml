@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: shreyash1414/cloud_shop_project-order-service
+          image: shreyash1414/cloud_shop_project-order-service:v2
           ports:
             - containerPort: 5002
