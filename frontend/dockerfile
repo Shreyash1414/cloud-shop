@@ -4,4 +4,10 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npx tailwindcss init -p
-CMD ["npm", "start"]
+RUN npm run build
+
+# Step 2: Serve it with NGINX
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
