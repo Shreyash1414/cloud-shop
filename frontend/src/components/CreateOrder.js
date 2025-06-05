@@ -6,7 +6,7 @@ const CreateOrder = () => {
   const [product, setProduct] = useState('');
 
   const createOrder = async () => {
-    await axios.post('http://localhost:5002/orders', { user_id: userId, product });
+    await axios.post('http://order-service:5002/orders', { user_id: userId, product });
     alert('Order placed!');
   };
 

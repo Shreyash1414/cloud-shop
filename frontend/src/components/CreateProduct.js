@@ -6,7 +6,7 @@ const CreateProduct = () => {
   const [price, setPrice] = useState('');
 
   const createProduct = async () => {
-    await axios.post('http://localhost:5001/products', { name, price });
+    await axios.post('http://product-service:5001/products', { name, price });
     alert('Product created!');
   };
 

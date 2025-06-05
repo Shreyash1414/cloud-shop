@@ -5,7 +5,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5001/products')
+    axios.get('http://product-service:5001/products')
       .then(res => setProducts(res.data));
   }, []);
 
