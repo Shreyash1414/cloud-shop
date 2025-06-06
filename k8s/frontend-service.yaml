@@ -22,8 +22,8 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 4000
-      targetPort: 4000
+      port: 80
+      targetPort: 80
       nodePort: 30080
   type: NodePort
 

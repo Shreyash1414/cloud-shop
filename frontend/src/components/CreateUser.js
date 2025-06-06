@@ -6,7 +6,7 @@ const CreateUser = () => {
   const [email, setEmail] = useState('');
 
   const createUser = async () => {
-    await axios.post('http://user-service:5000/users', { name, email });
+    await axios.post('http://localhost:30000/users', { name, email });
     alert('User created!');
   };
 
