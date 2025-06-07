@@ -6,7 +6,8 @@ spec:
   selector:
     app: user-service
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 5000
       targetPort: 5000
       nodePort: 30000  # Choose a port between 30000–32767

@@ -6,7 +6,8 @@ spec:
   selector:
     app: product-service
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 5001
       targetPort: 5001
       nodePort: 30001
