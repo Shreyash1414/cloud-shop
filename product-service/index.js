@@ -7,6 +7,25 @@ const register = new client.Registry();
 app.use(cors());
 app.use(express.json());
 
+
+const httpRequestCounter = new client.Counter({
+  name: 'http_requests_total',
+  help: 'Total number of HTTP requests',
+  labelNames: ['method', 'route', 'status_code'],
+  registers: [register],
+});
+
+// Middleware to count requests
+app.use((req, res, next) => {
+  res.on('finish', () => {
+    httpRequestCounter
+      .labels(req.method, req.route?.path || req.path, res.statusCode)
+      .inc();
+  });
+  next();
+});
+
+
 const db = new sqlite3.Database('./products.db');
 
 db.serialize(() => {
