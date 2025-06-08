@@ -4,7 +4,7 @@ metadata:
   name: order-service
   labels:
     app: order-service
-    release: prometheus 
+    release: prometheus
 spec:
   selector:
     app: order-service

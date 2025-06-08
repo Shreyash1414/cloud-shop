@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: shreyash1414/cloud_shop_project-user-service:v2
+          image: shreyash1414/cloud_shop_project-user-service:v3
           ports:
             - containerPort: 5000

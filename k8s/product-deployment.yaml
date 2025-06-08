@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: shreyash1414/cloud_shop_project-product-service:v2
+          image: shreyash1414/cloud_shop_project-product-service:v3
           ports:
             - containerPort: 5001
