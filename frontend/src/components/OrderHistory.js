@@ -6,7 +6,7 @@ const OrderHistory = () => {
   const [orders, setOrders] = useState([]);
 
   const fetchHistory = async () => {
-    const res = await axios.get(`${process.env.BACKEND_ORDERS_URL}/orders/history/${userId}`);
+    const res = await axios.get(`${process.env.REACT_APP_BACKEND_ORDERS_URL}/orders/history/${userId}`);
     setOrders(res.data);
   };
 
