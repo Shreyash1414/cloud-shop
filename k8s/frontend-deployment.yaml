@@ -15,6 +15,7 @@ spec:
       containers:
         - name: frontend
           image: shreyash1414/cloud_shop_project-frontend:v2
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           env:
