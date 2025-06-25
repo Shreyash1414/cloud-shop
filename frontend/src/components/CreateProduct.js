@@ -6,7 +6,7 @@ const CreateProduct = () => {
   const [price, setPrice] = useState('');
 
   const createProduct = async () => {
-    await axios.post(`${process.env.REACT_APP_BACKEND_PRODUCTS_URL}`, { name, price });
+    await axios.post(`${process.env.REACT_APP_BACKEND_PRODUCTS_URL}/products`, { name, price });
     alert('Product created!');
   };
 

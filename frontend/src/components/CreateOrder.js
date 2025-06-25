@@ -6,7 +6,7 @@ const CreateOrder = () => {
   const [product, setProduct] = useState('');
 
   const createOrder = async () => {
-    await axios.post(`${process.env.REACT_APP_BACKEND_ORDERS_URL}`, { user_id: userId, product });
+    await axios.post(`${process.env.REACT_APP_BACKEND_ORDERS_URL}/orders`, { user_id: userId, product });
     alert('Order placed!');
   };
 

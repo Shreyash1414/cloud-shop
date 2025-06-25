@@ -6,7 +6,7 @@ const CreateUser = () => {
   const [email, setEmail] = useState('');
 
   const createUser = async () => {
-    await axios.post(`${process.env.REACT_APP_BACKEND_USERS_URL}`, { name, email });
+    await axios.post(`${process.env.REACT_APP_BACKEND_USERS_URL}/users`, { name, email });
     alert('User created!');
   };
 
