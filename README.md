@@ -19,10 +19,10 @@ CloudShop is a full-stack, microservices-based e-commerce application designed f
 
 | Service         | Description                        | Port |
 |----------------|------------------------------------|------|
-| user-service    | Handles user registration & login  | 3001 |
-| product-service | Manages product catalog            | 3002 |
-| order-service   | Handles orders and checkout logic  | 3003 |
-| frontend        | React UI for the CloudShop app     | 3000 |
+| user-service    | Handles user registration & login  | 30000 |
+| product-service | Manages product catalog            | 30001 |
+| order-service   | Handles orders and checkout logic  | 30002 |
+| frontend        | React UI for the CloudShop app     | 30080 |
 
 ---
 
