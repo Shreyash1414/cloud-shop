@@ -35,10 +35,9 @@ cd cloudshop
 
 
 2. Build and Run
-bash
-Copy
-Edit
-docker-compose build
-docker-compose up
+
+cd k8s
+kubectl apply -f .
+
 3. Access the App
-Visit: http://localhost:3000
+Visit: http://localhost:30080
